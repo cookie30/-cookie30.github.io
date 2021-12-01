@@ -1,0 +1,292 @@
+.this {
+  border: 1px solid red;
+}
+:root {
+  --main-GreenColor: #2a9134;
+  --main-LightGreenColor: #90b44b;
+  --main-WhiteColor: #f1fffa;
+  --main-LightDarkColor: #242424;
+  --main-YellowColor: rgb(249, 228, 148);
+  --main-PinkColor: #ef7998;
+  --main-BlackColor: #071013;
+}
+body {
+  
+}
+
+/* ========== 共同設計 ========== */
+.banner-title{
+  font-size:76px;
+  color:var(--main-GreenColor);
+}
+
+.btn-LightGreen{
+  border-color:var(--main-LightGreenColor);
+}
+
+.btn-LightGreen:hover{
+  background-color:var(--main-GreenColor);
+  color:var(--main-WhiteColor)!important;
+}
+
+.btn-Green{
+  background-color:var(--main-GreenColor);
+  color:var(--main-WhiteColor)!important;
+  border:2px solid var(--main-GreenColor);
+  box-shadow:0 1px 2px rgba(0, 0, 0,0.3);
+}
+.btn-Green:hover{
+  background-color:var(--main-LightGreenColor);
+  color:var(--main-BlackColor)!important;
+  border:2px solid var(--main-LightGreenColor);
+  box-shadow:0 5px 15px rgba(0, 0, 0,0.6);
+}
+/* ========== 共同設計 End ========== */
+
+
+/* ========== header toggler ========== */
+header{
+  background-color: #071013;
+  height: 50px;
+}
+
+header .navbar{
+  background-color: #242424 !important;
+}
+
+header .navbar a{
+  background-color: var(--main-LightGreenColor)!important;
+}
+
+header .navbar .navbar-nav{
+  margin: auto;
+  font: size 20px;
+}
+
+header .navbar .navbar-toggler div{
+width:25px;
+height: 3px;
+background-color:#90b44b;
+margin:5px;
+transition: all 1;
+}
+
+header .navbar .navbar-toggler .bar1.change{
+  transform: rotate(-45deg) translate(-5px,6px);
+}
+header .navbar .navbar-toggler .bar2.change{
+  opacity:0;
+}
+header .navbar .navbar-toggler .bar3.change{
+  transform: rotate(45deg) translate(-5px,-6px);  
+}
+
+header .navbar .navbar-nav .nav-item{
+  padding:0px 6px;
+}
+
+header .navbar .navbar-nav .nav-item .nav-link{
+  font-size: 16px;
+  padding:8px;
+}
+
+/* ========== header toggler  ========== */
+header {
+  height:50px;
+}
+header .navbar {
+  padding: 5px 20px !important;
+  z-index: 9999;
+  background: var(--main-LightDarkColor);
+}
+header .navbar .navbar-toggler {
+  border: 3px solid var(--main-GreenColor);
+  padding: 3px;
+}
+
+header .navbar .navbar-toggler div {
+  width: 25px;
+  height: 3px;
+  background: var(--main-GreenColor);
+  margin: 5px;
+  transition: all 0.5s ease; /*transform*/
+}
+
+/* ========== header toggler 動畫 ========== */
+header .navbar .navbar-toggler .change.bar1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+header .navbar .navbar-toggler .change.bar2 {
+  opacity: 0;
+}
+header .navbar .navbar-toggler .change.bar3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+/* ========== header toggler 動畫 End ========== */
+
+
+/* ========== collapse item ========== */
+
+
+
+/* ========== collapse item End ========== */
+
+
+/* ========== about-img_container ========== */
+.about-img_container{
+  width: 600px;
+  height: 400px;
+  position:relative;
+  cursor:pointer;
+}
+.about-img_container:before{
+  content:"";
+  position: absolute;
+  top: 1.3rem;
+  left: 1.3rem;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  outline:0.5rem solid var(--main-LightGreenColor);
+  transition: all 1s linear;
+}
+
+.about-img_container:hover:before{
+  top:0px;
+  left:0px;
+}
+
+.about-img_container img{
+  width: 100%;
+  height: 100%;
+}
+
+/* ========== about-img_container End ========== */
+
+
+
+/* ========== 風景特色 ========== */
+.landscape-photos{
+  min-height: 50vh;
+  position:relative;
+}
+
+.landscape-photo{
+width:50%;
+height:65%;
+position:absolute;
+transition:all 1.5s ease-in-out;
+}
+
+.landscape-photo:hover{
+  transform:scale(1.2);
+  z-index:50;
+}
+
+.landscape-photo-1{
+  top:0;
+  left:10%;
+  transform:rotate(-15deg);
+  z-index:20;
+}
+
+.landscape-photo-2{
+  top:0;
+  left:46%;
+  transform:rotate(8deg);
+  z-index:30;
+}
+
+.landscape-photo-3{
+  top:40%;
+  left:3%;
+  transform:rotate(-5deg);
+}
+
+.landscape-photo-4{
+  top:41%;
+  left:40%;
+  transform:rotate(10deg);
+}
+/* ========== 風景特色 End ========== */
+
+
+/* ========== posts card ==========*/
+.card{
+  background-color:transparent;
+  position:flex;
+  
+  cursor: pointer;
+}
+
+.card .tag{
+  background-color:black;
+  color:var(--main-WhiteColor)!important;
+  position:absolute;
+  padding:4px;
+  opacity:0;
+  transition:all 1s linear;
+}
+
+.card:hover .tag{
+  opacity:1;
+}
+
+section#posts .card .card-img-top {
+  height:200px;
+  object-fit: cover;
+  /* border-radius: 0!important; */
+}
+
+section#posts .card .card-content {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+section#posts .card .card-footer .post-link {
+  color: var(--main-GreenColor);
+  text-decoration: none;
+}
+
+section#posts .card .card-footer .post-link:hover {
+  color: #dd0000;
+}
+/* ========== posts card End ==========*/
+
+
+
+
+
+/* ========== 輪播圖  ========== */
+/* section#partners {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+section#partners .carousel-control-prev,
+.carousel-control-prev {
+  font-size: 2.5rem;
+  color: var(--main-BlackColor);
+}
+
+section#partners .carousel-control-prev,
+.carousel-control-next {
+  font-size: 2.5rem;
+  color: var(--main-BlackColor);
+}
+
+section#partners .carousel-control-prev {
+  transform: translateX(-200%);
+}
+
+section#partners .carousel-control-next {
+  transform: translateX(200%);
+} */
+/* ========== 輪播圖 End  ==========*/
+
+/* ========== footer  ==========*/
+#footer {
+  background: var(--main-BlackColor)!important;
+  
+}
+/* ========== footer End  ==========*/
